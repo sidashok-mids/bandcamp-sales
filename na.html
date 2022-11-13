@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+<div class="vega-visualization" id="vega-visualization-da5dfd9e29d342378af6bb27af1d4e0d"></div>
+<script type="text/javascript">
+  const spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-6fd17b87f8e38f3904750599756ffea8"}, "mark": "bar", "encoding": {"color": {"field": "variable", "scale": {"range": ["green", "grey"]}, "type": "nominal"}, "tooltip": [{"field": "country", "type": "nominal"}, {"field": "value", "type": "quantitative"}], "x": {"axis": {"title": "Country"}, "field": "country", "type": "nominal"}, "y": {"axis": {"title": "Average Amount Over Asking ($)"}, "field": "value", "type": "quantitative"}}, "title": "NA Average Amount over Asking", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-6fd17b87f8e38f3904750599756ffea8": [{"country": "Canada", "variable": "Physical", "value": 0.36328330206378984}, {"country": "United States", "variable": "Physical", "value": 0.9493898495712076}, {"country": "Canada", "variable": "Digital", "value": 0.8859782226905515}, {"country": "United States", "variable": "Digital", "value": 1.0317377209343634}]}};
+  const embedOpt = {};
+  vegaEmbed('#vega-visualization-da5dfd9e29d342378af6bb27af1d4e0d', spec, embedOpt).catch(console.error);
+</script>
+</body>
+</html>

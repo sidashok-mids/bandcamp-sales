@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-4b336fc5be49c8b1a2647af6a4172b69"}, "mark": "bar", "encoding": {"color": {"field": "variable", "scale": {"range": ["orange", "yellow"]}, "type": "nominal"}, "tooltip": [{"field": "country", "type": "nominal"}, {"field": "value", "type": "quantitative"}], "x": {"axis": {"title": "Country"}, "field": "country", "type": "nominal"}, "y": {"axis": {"title": "Average Amount Over Asking ($)"}, "field": "value", "type": "quantitative"}}, "title": "APAC Average Amount over Asking", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-4b336fc5be49c8b1a2647af6a4172b69": [{"country": "Armenia", "variable": "Physical", "value": 0.0}, {"country": "Australia", "variable": "Physical", "value": 0.7912291933418695}, {"country": "Bangladesh", "variable": "Physical", "value": 0.0}, {"country": "China", "variable": "Physical", "value": 0.0}, {"country": "Georgia", "variable": "Physical", "value": 0.0}, {"country": "Guam", "variable": "Physical", "value": 0.0}, {"country": "Hong Kong", "variable": "Physical", "value": 1.4466666666666665}, {"country": "India", "variable": "Physical", "value": 0.0}, {"country": "Indonesia", "variable": "Physical", "value": 2.37}, {"country": "Japan", "variable": "Physical", "value": 0.39873015873015877}, {"country": "Kazakhstan", "variable": "Physical", "value": 0.0}, {"country": "Macao", "variable": "Physical", "value": 0.0}, {"country": "Malaysia", "variable": "Physical", "value": 0.0025}, {"country": "Maldives", "variable": "Physical", "value": 0.0}, {"country": "New Caledonia", "variable": "Physical", "value": 0.0}, {"country": "New Zealand", "variable": "Physical", "value": 0.0004918032786885246}, {"country": "Papua New Guinea", "variable": "Physical", "value": 0.0}, {"country": "Philippines", "variable": "Physical", "value": 0.0}, {"country": "Republic of Korea", "variable": "Physical", "value": 0.0014285714285714286}, {"country": "Russian Federation", "variable": "Physical", "value": 0.963793103448276}, {"country": "Singapore", "variable": "Physical", "value": 0.8835294117647059}, {"country": "Thailand", "variable": "Physical", "value": -0.1546153846153846}, {"country": "Turkey", "variable": "Physical", "value": 0.01}, {"country": "Viet Nam", "variable": "Physical", "value": 0.0}, {"country": "Armenia", "variable": "Digital", "value": 0.300625}, {"country": "Australia", "variable": "Digital", "value": 0.6749902723735408}, {"country": "Bangladesh", "variable": "Digital", "value": 0.29}, {"country": "China", "variable": "Digital", "value": 0.5862765957446808}, {"country": "Georgia", "variable": "Digital", "value": 0.3256140350877193}, {"country": "Guam", "variable": "Digital", "value": 1.75}, {"country": "Hong Kong", "variable": "Digital", "value": 0.1003921568627451}, {"country": "India", "variable": "Digital", "value": 0.3359090909090909}, {"country": "Indonesia", "variable": "Digital", "value": 0.5746341463414634}, {"country": "Japan", "variable": "Digital", "value": 0.3101902063941724}, {"country": "Kazakhstan", "variable": "Digital", "value": 2.0225}, {"country": "Macao", "variable": "Digital", "value": 0.1111111111111111}, {"country": "Malaysia", "variable": "Digital", "value": 0.48694444444444446}, {"country": "Maldives", "variable": "Digital", "value": 4.0}, {"country": "New Caledonia", "variable": "Digital", "value": 0.09666666666666666}, {"country": "New Zealand", "variable": "Digital", "value": 0.6762451361867704}, {"country": "Papua New Guinea", "variable": "Digital", "value": 0.26}, {"country": "Philippines", "variable": "Digital", "value": 1.2416666666666667}, {"country": "Republic of Korea", "variable": "Digital", "value": 0.11039568345323741}, {"country": "Russian Federation", "variable": "Digital", "value": 0.29343478260869565}, {"country": "Singapore", "variable": "Digital", "value": 0.21275510204081635}, {"country": "Thailand", "variable": "Digital", "value": 0.17986486486486486}, {"country": "Turkey", "variable": "Digital", "value": 0.10647058823529412}, {"country": "Viet Nam", "variable": "Digital", "value": -0.29307692307692307}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
